@@ -1,0 +1,82 @@
+/* Container för prototyper */
+.prototyp-container {
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.prototyp-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+/* Grid för projektkort */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Stil för varje projektkort */
+.project-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Stil för projektbilden */
+.project-image {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Projektinformation */
+.project-info h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Stil för prototyp-länken (knapp) */
+.prototyp-link {
+  background-color: #db9289;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.prototyp-link:hover {
+  transform: translateY(-5px); 
+  background-color: #b67064;  
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

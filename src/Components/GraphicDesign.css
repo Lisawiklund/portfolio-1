@@ -1,0 +1,157 @@
+/* Container för grafiska projekt */
+.graphic-design-container {
+  text-align: center;
+  padding: 40px;
+}
+
+/* Grid layout för att visa två projekt per rad */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-embed {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.project-info {
+  margin-top: 10px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #555;
+}
+
+/* Stil för knappen "Visa Större" */
+.view-button {
+  background-color: #db9289;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.view-button:hover {
+  transform: translateY(-5px); 
+  background-color: #b67064; 
+}
+
+/* Navigeringspilar */
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 18px;
+  color: #db9289;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #b67064; 
+}
+
+/* Modal stil */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modal-embed {
+  width: 100%;
+  height: 100%; /* Fullskärmsvisning i modal */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #db9289;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #b67064;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Visa ett projekt per rad på mindre skärmar */
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .modal-embed {
+    height: 80vh; /* Mindre storlek på mobilskärmar */
+  }
+}

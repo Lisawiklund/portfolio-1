@@ -1,0 +1,123 @@
+/* Container för hela sidan */
+.webbplatsprojekt-container {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Rubrik-styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Allmän paragrafstyling */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Beskrivningsblock för projektet */
+.project-description {
+  max-width: 800px;
+  margin: 0 auto 60px; /* För att hålla beskrivningen i centrum och skapa avstånd nedåt */
+  padding: 0 20px;
+  text-align: left;
+  color: #444;
+  line-height: 1.6; /* För bättre läsbarhet */
+}
+
+.project-description h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid för att arrangera laptop och mobil-vyer */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Desktop-vyn blir 2/3, mobil-vyn 1/3 */
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Stil för laptop och mobil vyer */
+.device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.device.mobile {
+  width: 300px; 
+}
+
+.device.laptop {
+  width: 1050px;
+}
+
+/* Iframe-container */
+.iframe-container {
+  width: 100%;
+  height: 500px; 
+  overflow: auto; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gemensam stil för iframes */
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: auto; 
+}
+
+/* Stil för ikoner */
+.icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Stil för knappen */
+.visit-site-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #db9289;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.visit-site-button:hover {
+  background-color: #b67064;
+  transform: translateY(-5px); 
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .device.laptop, .device.mobile {
+    width: 100%; 
+  }
+
+  .visit-site-button {
+    margin-top: 20px;
+  }
+}

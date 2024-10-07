@@ -1,0 +1,51 @@
+/* Grid layout för att visa appar */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Anpassa kolumnstorleken */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* Begränsa höjden för alla bilder */
+  object-fit: contain; /* Se till att bilden inte sträcks ut */
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.project-link {
+  display: block;  /* Gör så att länkarna visas på varsin rad */
+  background-color: #db9289;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 10px; /* Ger ett mellanrum mellan knapparna */
+}
+
+.project-link:hover {
+  transform: translateY(-5px); 
+  background-color: #b67064;
+}

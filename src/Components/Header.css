@@ -1,0 +1,28 @@
+/* Grundläggande styling för header */
+header {
+    background-color: #ffffff;  
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    position: sticky;  
+    top: 0;  
+    z-index: 1000; 
+  }
+  
+  .navbar {
+    display: flex;  
+    align-items: center; 
+  }
+  
+  .navbar a {
+    text-decoration: none;  /* Tar bort understrykningen från länkar */
+    color: #333;  /* Textfärg för länkar */
+    font-size: 18px;  /* Länkarnas textstorlek */
+    padding: 10px 20px;  /* Lägger till utrymme runt länkarna */
+    transition: color 0.3s ease;  /* Gör att länkens färg ändras mjukt när man hovrar */
+  }
+  
+  .navbar a:hover {
+    color: #db9289;  /* Ändrar färgen när muspekaren är över länken */
+  }
+  
+  

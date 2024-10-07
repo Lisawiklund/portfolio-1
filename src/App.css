@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+/* Grundlayout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;  /* Google Fonts Montserrat */
+  background-color: #f4f4f4;  /* Ljusgrå bakgrund */
+  color: #333;  /* Mörkgrå textfärg */
+  height: 100%;
+  box-sizing: border-box;  /* För bättre kontroll av padding/margins */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout för huvudsektionen */
+.main-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;  /* Text och bild sida vid sida */
+  justify-content: flex-start; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  padding-left: 100px;  /* Utrymme från vänsterkanten */
 }
 
-.App-link {
-  color: #61dafb;
+/* Stil för rubrik */
+.intro-section h1 {
+  font-size: 64px;
+  font-weight: 700;  
+  color: #db9289; 
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Stil för stycket (p) */
+.intro-section p {
+  font-size: 24px;
+  color: #666; 
+  margin-bottom: 30px;
+}
+
+/* Stil för Om mig-länken */
+.about-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #db9289; 
+  font-size: 32px; 
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-link:hover {
+  transform: scale(0.95);  /* Zooma ut texten vid hover */
+  color: #db9289; 
+}
+
+/* Stil för pilen */
+.arrow {
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+/* Pilens hover-effekt för att flytta den lite */
+.about-link:hover .arrow {
+  transform: translateX(5px); 
+}
+
+/* Fullskärmsbild */
+.image-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+}
+
+.full-screen-image {
+  width: 50%;  
+  height: auto; 
+  border-radius: 100px; 
+}
+
+/* PDF-inbäddning */
+.pdf-embed {
+  width: 100%;
+  height: 500px; 
+}
+
+/* Portfolio-sektionen */
+.portfolio-container {
+  text-align: center;  
+  padding: 40px; 
+}
+
+/* Stil för rubriken inom portfolio */
+.portfolio-container h1 {
+  font-size: 2.5rem; 
+  margin-bottom: 20px;
+}
+
+/* Stil för beskrivande text inom portfolio */
+.portfolio-container p {
+  font-size: 1.2rem;  
+  margin-bottom: 40px;
+}
+
+/* Stil för footern */
+footer {
+  text-align: center;  
+  padding: 20px;  
+  background-color: #f1f1f1; 
+  color: #333;  
+  position: relative; 
+  bottom: 0;
+  width: 100%;  
 }
