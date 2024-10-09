@@ -43,7 +43,10 @@ const Appli = () => {
 
   return (
     <div className="appli-container">
-      <h1>Mina Appar</h1>
+        <div className="portfolio-container">
+      <h1>Appar</h1>
+    
+    </div>
       <div className="projects-grid">
         {apps.map((app, index) => (
           <div className="project-card" key={index}>

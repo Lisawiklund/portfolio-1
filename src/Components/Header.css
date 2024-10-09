@@ -1,28 +1,100 @@
 /* Grundläggande styling för header */
 header {
+  background-color: #ffffff;  
+  padding: 10px 50px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  position: sticky;  
+  top: 0;  
+  z-index: 1000;
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center; 
+  height: 80px;  
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* Stil för logotypen */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 170px;  
+  overflow: hidden; 
+}
+
+.logo img {
+  max-height: 100%; 
+  max-width: 100%; 
+  object-fit: contain;
+}
+
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;  
+  color: #333;  
+  font-size: 18px;  
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #db9289;
+}
+
+/* För hamburgermeny */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* För mindre skärmar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -150%;  
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease; 
+  }
+
+  .nav-links.open {
+    left: 0;
     background-color: #ffffff;  
-    padding: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-    position: sticky;  
-    top: 0;  
-    z-index: 1000; 
+    z-index: 9999;
   }
-  
-  .navbar {
-    display: flex;  
-    align-items: center; 
+
+  .menu-toggle {
+    display: flex;
   }
-  
-  .navbar a {
-    text-decoration: none;  /* Tar bort understrykningen från länkar */
-    color: #333;  /* Textfärg för länkar */
-    font-size: 18px;  /* Länkarnas textstorlek */
-    padding: 10px 20px;  /* Lägger till utrymme runt länkarna */
-    transition: color 0.3s ease;  /* Gör att länkens färg ändras mjukt när man hovrar */
+
+  .nav-links li {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
   }
-  
-  .navbar a:hover {
-    color: #db9289;  /* Ändrar färgen när muspekaren är över länken */
+
+  .nav-links {
+    padding: 0;
+    margin: 0;
   }
-  
-  
+}

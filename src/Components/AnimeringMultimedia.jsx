@@ -11,18 +11,21 @@ const AnimeringMultimedia = () => {
   const handleFullscreen = (element) => {
     if (element.requestFullscreen) {
       element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) { /* Firefox */
+    } else if (element.mozRequestFullScreen) { /**/
       element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    } else if (element.webkitRequestFullscreen) { /**/
       element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { /* IE/Edge */
+    } else if (element.msRequestFullscreen) { //
       element.msRequestFullscreen();
     }
   };
 
   return (
     <div className="animering-multimedia-container">
-      <h1>Animering och Multimedia</h1>
+       <div className="portfolio-container">
+      <h1>Animering & Multimedia</h1>
+    
+    </div>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
@@ -32,13 +35,13 @@ const AnimeringMultimedia = () => {
                 src={project.gif}
                 alt={project.title}
                 className="project-gif"
-                onClick={(e) => handleFullscreen(e.target)}  // Sätter bilden i fullskärmsläge
+                onClick={(e) => handleFullscreen(e.target)}  
               />
             ) : (
               <video
                 controls
                 className="project-video"
-                onClick={(e) => handleFullscreen(e.target)}  // Sätter videon i fullskärmsläge
+                onClick={(e) => handleFullscreen(e.target)} 
               >
                 <source src={project.video} type="video/mp4" />
                 Din webbläsare stöder inte video-taggen.

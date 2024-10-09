@@ -1,0 +1,36 @@
+.about-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #db9289; 
+  font-size: 32px; 
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-link:hover {
+  transform: scale(0.95);
+  color: #db9289; 
+}
+
+/* Stil för pilen */
+.arrow {
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.about-link:hover .arrow {
+  transform: translateX(5px); 
+}
+
+/* Anpassning för mindre skärmar */
+@media (max-width: 768px) {
+
+  .arrow {
+    transform: rotate(90deg);  
+  }
+
+  .about-link:hover .arrow {
+    transform: translateY(5px);  
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css'; 
+
 const Projects = () => {
   const projects = [
     {
@@ -39,17 +40,22 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects-container">
-      {projects.map((project, index) => (
-        <div key={index} className="project-card">
-         <Link to={project.link} className="link">  
-            <img src={project.image} alt={project.title} className="project-image" />
+    <div className="graphic-design-container">
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <img className="project-image" src={project.image} alt={project.title} />
             <div className="project-info">
               <h3>{project.title}</h3>
+
+            
+              <Link to={project.link}>
+                <button className="view-button">Visa Större</button>
+              </Link>
             </div>
-          </Link>
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -7,7 +7,6 @@ const Portfolio = () => {
       <h1>Min Portfolio</h1>
       <p>Här är några av mina senaste projekt.</p>
 
-      {/* Projektsektionen */}
       <Projects />
     </div>
   );

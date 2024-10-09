@@ -18,8 +18,14 @@ const Prototyp = () => {
   ];
 
   return (
+  
+    <>
+  <div className="portfolio-container">
+      <h1>Textproduktion</h1>
+    
+    </div>
     <div className="prototyp-container">
-      <h1>Mina Prototyper</h1>
+     
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
@@ -44,6 +50,7 @@ const Prototyp = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

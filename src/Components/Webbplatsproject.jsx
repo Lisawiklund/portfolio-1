@@ -6,11 +6,14 @@ import './Webbplatsprojekt.css';
 const Webbplatsprojekt = () => {
   return (
     <div className="webbplatsprojekt-container">
-      <h1>Mitt Webbplatsprojekt</h1>
-      <p>
+       <div className="portfolio-container">
+      <h1>Webbplatsprojekt</h1>
+    <p>
         Utforska mitt projekt i både laptop- och mobilvy. Du kan interagera direkt
         med webbplatsen eller besöka den fullständiga versionen via länken nedan.
       </p>
+    </div>
+      
       
       <div className="grid-container">
         {/* Desktop-vy */}

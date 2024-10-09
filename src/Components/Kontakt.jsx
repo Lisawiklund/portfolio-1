@@ -21,7 +21,12 @@ const KontaktForm = () => {
 
   return (
     <>
-      <h1 className="kontaktrubrik">Kontakta mig</h1> 
+      <div className="portfolio-container">
+      <h1>Kontakta mig</h1>
+     
+
+ 
+    </div>
       <p>
         Kontakta mig genom att fylla i formuläret nedan så återkommer jag till dig inom 24 timmar.
       </p>

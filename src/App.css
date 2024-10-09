@@ -1,112 +1,158 @@
-/* Grundlayout */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;  /* Google Fonts Montserrat */
-  background-color: #f4f4f4;  /* Ljusgrå bakgrund */
-  color: #333;  /* Mörkgrå textfärg */
+/* Gör så att body och html tar hela höjden */
+html, body {
   height: 100%;
-  box-sizing: border-box;  /* För bättre kontroll av padding/margins */
+  margin: 0;
+  width: 100%;
+  font-family: 'Playfair Display', serif;
 }
 
-/* Layout för huvudsektionen */
-.main-container {
+h1, h2, h3, p {
+  font-family: 'Playfair Display', serif;
+}
+
+#root {
   display: flex;
-  flex-direction: row;  /* Text och bild sida vid sida */
-  justify-content: flex-start; 
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
-  padding-left: 100px;  /* Utrymme från vänsterkanten */
+  padding: 50px 170px;
+}
+
+/* Stil för portfolio-container */
+.portfolio-container {
+  text-align: center; 
+}
+
+.portfolio-container h1, 
+.portfolio-container {
+  color: #db9289;  
 }
 
 /* Stil för rubrik */
-.intro-section h1 {
-  font-size: 64px;
-  font-weight: 700;  
+.intro-section, h2 {
+  font-size: 54px; 
+  font-weight: 400;  
   color: #db9289; 
-  margin: 20px;
+  margin: 0 0 20px 0; 
 }
+
 
 /* Stil för stycket (p) */
 .intro-section p {
-  font-size: 24px;
-  color: #666; 
-  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  width: 100%; 
+}
+
+/* Gör p bredare bara på större skärmar */
+@media (min-width: 769px) {
+  .intro-section p {
+    width: 480px; 
+  }
 }
 
 /* Stil för Om mig-länken */
 .about-link {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
   color: #db9289; 
   font-size: 32px; 
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
+  margin-bottom: 0; 
 }
 
 .about-link:hover {
-  transform: scale(0.95);  /* Zooma ut texten vid hover */
+  transform: scale(0.95);
   color: #db9289; 
 }
 
 /* Stil för pilen */
-.arrow {
+.arrow1 {
   font-size: 32px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; 
 }
 
 /* Pilens hover-effekt för att flytta den lite */
-.about-link:hover .arrow {
-  transform: translateX(5px); 
+.about-link:hover .arrow1 {
+  transform: translateX(5px);
 }
 
 /* Fullskärmsbild */
 .image-section {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;  
-  align-items: center;  
+  align-items: center;
+  height: 500px; 
+  margin-top: -20px; 
 }
 
 .full-screen-image {
-  width: 50%;  
+  width: 80%; 
   height: auto; 
-  border-radius: 100px; 
+  max-width: 450px; 
+  border-radius: 50px;
 }
 
-/* PDF-inbäddning */
-.pdf-embed {
-  width: 100%;
-  height: 500px; 
+/* Anpassningar för mindre skärmar */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; 
+    padding: 20px;
+    text-align: center; 
+  }
+
+  .intro-section, h2 {
+    font-size: 40px; 
+  }
+
+  .intro-section p {
+    font-size: 18px; 
+    margin-top: -20px; 
+  }
+
+  .full-screen-image {
+    width: 70%;  
+    max-width: 400px; 
+    margin-top: -10px; 
+  }
 }
 
-/* Portfolio-sektionen */
-.portfolio-container {
-  text-align: center;  
-  padding: 40px; 
-}
-
-/* Stil för rubriken inom portfolio */
-.portfolio-container h1 {
-  font-size: 2.5rem; 
-  margin-bottom: 20px;
-}
-
-/* Stil för beskrivande text inom portfolio */
-.portfolio-container p {
-  font-size: 1.2rem;  
-  margin-bottom: 40px;
-}
-
-/* Stil för footern */
+/* Grundläggande stil för footern */
 footer {
-  text-align: center;  
-  padding: 20px;  
-  background-color: #f1f1f1; 
-  color: #333;  
-  position: relative; 
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+  width: 100%;
+  position: relative;
   bottom: 0;
-  width: 100%;  
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsiv footer för att ligga längst ner på alla skärmstorlekar */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }

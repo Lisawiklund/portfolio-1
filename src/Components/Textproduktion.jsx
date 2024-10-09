@@ -31,7 +31,6 @@ const Textproduktion = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
-  // visar PDF-filen
   const openModal = (file) => {
     setModalContent(file);
     setModalOpen(true);
@@ -43,8 +42,12 @@ const Textproduktion = () => {
   };
 
   return (
+    
     <div className="textproduktion-container">
+   <div className="portfolio-container">
       <h1>Textproduktion</h1>
+    
+    </div>
       <p>
         Här kan du läsa om olika projekt inom textproduktion, såsom innehållsskapande, SEO-optimering,
         och copywriting för webben.

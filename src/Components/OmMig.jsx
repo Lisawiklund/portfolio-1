@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './OmMig.css'; 
 
 const OmMig = () => {
@@ -22,9 +23,13 @@ const OmMig = () => {
           När jag inte arbetar med att utveckla och förbättra webbplatser älskar jag att utforska nya 
           designverktyg och inspireras av andra kreativa projekt. Jag är ständigt på jakt efter nya utmaningar som kan hjälpa mig att växa både personligt och professionellt.
         </p>
+        <p>
+          Vill du komma i kontakt med mig? <Link to="/kontakt" className="contact-link">Kontakta mig</Link> så återkommer jag så snart som möjligt!
+        </p> 
       </div>
     </div>
   );
 };
 
 export default OmMig;
+

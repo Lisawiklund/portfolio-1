@@ -39,7 +39,10 @@ const GraphicDesign = () => {
 
   return (
     <div className="graphic-design-container">
-      <h1>Mina Grafiska Projekt</h1>
+        <div className="portfolio-container">
+      <h1>Grafiska projekt</h1>
+    
+    </div>
       <div className="projects-grid">
         {projects.slice(currentIndex, currentIndex + 2).map((project, index) => (
           <div className="project-card" key={index}>
